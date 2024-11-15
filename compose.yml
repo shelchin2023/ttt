@@ -13,7 +13,5 @@ services:
   dashboard:
     image: haishanh/yacd
     restart: always
-    environment:
-      - YACD_DEFAULT_BACKEND=http://192.168.50.52:9090
     ports:
       - "1234:80"
