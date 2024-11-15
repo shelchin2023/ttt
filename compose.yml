@@ -10,3 +10,10 @@ services:
       - 7890:7890
     mem_limit: ${CLASH_MEM_LIMIT:-64m}
     restart: always
+  dashboard:
+    image: haishanh/yacd
+    restart: always
+    environment:
+      - YACD_DEFAULT_BACKEND=http://clash:9090
+    ports:
+      - "1234:80"
