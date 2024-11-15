@@ -1,0 +1,12 @@
+version: "1.0"
+services:
+  clash:
+    image: dreamacro/clash:v1.18.0
+    container_name: clash
+    volumes:
+      - ./config.yaml:/root/.config/clash/config.yaml
+    ports:
+      - 9090:9090
+      - 7890:7890
+    mem_limit: ${CLASH_MEM_LIMIT:-64m}
+    restart: always
