@@ -1,7 +1,7 @@
 version: "1.0"
 services:
   clash:
-    image: dreamacro/clash:v1.18.0
+    image: shelchin/clash:v1.18.0
     container_name: clash
     volumes:
       - ./config.yaml:/root/.config/clash/config.yaml
